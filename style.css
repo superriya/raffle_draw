@@ -35,9 +35,10 @@ body {
     text-transform: uppercase;
 }
 
-.names {
+
+/* .names {
     font-size: 2.5rem;
-}
+} */
 
 .roll:hover {
     background-color: #ffffff;
@@ -48,16 +49,27 @@ body {
     display: none;
 }
 
+.show {
+    display: inline-block;
+}
+
 
 /* after-functionality */
 
+button.roll.roll-winner {
+    border: 0;
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 45px;
+}
+
 .winner {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 28px;
+    margin: 0;
 }
 
 .winner span {
-    font-size: 1rem;
+    font-size: 25px;
     font-weight: 500;
 }
 
@@ -77,4 +89,88 @@ body {
 
 .roll-again:hover {
     opacity: 1;
+}
+
+
+/* gati-css */
+
+.round {
+    width: 200px;
+    height: 200px;
+    background: #d0848d;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.ani1 {
+    animation: one 2s linear infinite;
+}
+
+@keyframes one {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(90deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    75% {
+        transform: rotate(270deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.round-title {
+    padding-top: 80px;
+}
+
+.winn-btn {
+    border: 3px solid #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin-top: 55px;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    background: #c93374;
+    color: #eee;
+    font-weight: bold;
+}
+
+.bubble {
+    margin: 30px;
+}
+
+.tile {
+    width: 20px;
+    height: 20px;
+    background: white;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.tile:nth-of-type(1) {
+    animation: animate1 0.4s alternate infinite linear;
+}
+
+.tile:nth-of-type(2) {
+    animation: animate1 0.4s 0.1s alternate infinite linear;
+}
+
+.tile:nth-of-type(3) {
+    animation: animate1 0.4s 0.2s alternate infinite linear;
+    margin-right: 0px;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(1.25);
+    }
 }
